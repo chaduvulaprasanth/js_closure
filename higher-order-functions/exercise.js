@@ -37,9 +37,22 @@ function forEach(array, callback) {}
 //--------------------------------------------------
 
 //Extension 1
-function mapWith(array, callback) {}
+function addTwo(num) {
+    console.log (num + 2);
+}
+
+function mapWith(array, callback) {
+    var a = array.forEach(callback);
+return a
+}
+mapWith([1,2,3,4],addTwo)
+
 
 //Extension 2
+function addTwo(num) {
+    return (num + 2);
+}
+
 function reduce(array, callback, initialValue) {}
 
 //Extension 3
@@ -55,7 +68,18 @@ function union(arrays) {}
 // should log: [5, 10, 15, 88, 1, 7, 100]
 
 //Extension 5
-function objOfMatches(array1, array2, callback) {}
+function callback(array1,array2){
+    const obj = {};
+    for(let i = 0; i < array1.length; i++){
+        if(array1[i] == array2[i]){
+            obj[array1[i]] = array2[i];
+        }
+    }
+    return obj;
+}
+function objOfMatches(array1, array2, callback) {
+    return callback(array1,array2);
+}
 
 // console.log(objOfMatches(['hi', 'howdy', 'bye', 'later', 'hello'], ['HI', 'Howdy', 'BYE', 'LATER', 'hello'], function(str) { return str.toUpperCase(); }));
 // should log: { hi: 'HI', bye: 'BYE', later: 'LATER' }
