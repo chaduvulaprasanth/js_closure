@@ -2,7 +2,7 @@
 let arrays = [[1, 2, 3], [4, 5], [6]];
 
 // Your code here.
-arrays.flat()
+arrays.reduce((acc, val) => acc.concat(val), []);
 // → [1, 2, 3, 4, 5, 6]
 
 // Challenge 2. Your own loop
