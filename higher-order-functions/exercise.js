@@ -1,5 +1,7 @@
 // Challenge 1
-function addTwo(num) {}
+function addTwo(num) {
+    return (n+2);
+}
 
 // To check if you've completed it, uncomment these console.logs!
 // console.log(addTwo(3));
