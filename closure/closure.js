@@ -46,12 +46,12 @@ function storyWriter(){
     var obj = {
        words: "",
        addWords: function(word){
-                   this.words += word;
-                   return this.words;
+                   obj.words += word;
+                   return obj.words;
                },
        erase: function (q){
-               this.words = "";
-               return this.words;
+               obj.words = "";
+               return obj.words;
        }
     };
        return obj;
